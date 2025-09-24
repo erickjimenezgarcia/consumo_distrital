@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  flex: 1;
+  width: 100%;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: system-ui, Arial;
+}
+
+.topbar .hint {
+  color: #6b7280;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+#search {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  min-width: 220px;
+}
+
+.leaflet-container {
+  font: 14px/1.3 system-ui, Arial;
+}
+
+/* -------- Simil Bootstrap container -------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px); /* resto del viewport sin el header */
+  max-width: 1140px;          /* similar al container lg */
+  margin: 0 auto;             /* centrado */
+  padding: 0 15px 20px;          /* gutters */
+  box-sizing: border-box;
+}
+
+.top {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.leaflet-interactive {
+  outline: none;   /* evita el rectángulo de foco */
+}
+
+.label-distrito {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #111;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 3px #fff; /* contraste para ver sobre el mapa */
+}
+
