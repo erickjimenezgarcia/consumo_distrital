@@ -94,7 +94,10 @@ input.addEventListener('input', () => {
   };
 
   distritosLayer = L.geoJSON(filtered, { style: estiloPorDistrito, onEachFeature }).addTo(map);
-  if (distritosLayer.getBounds().isValid()) map.fitBounds(distritosLayer.getBounds(), { padding: [20,20] }
+  if (distritosLayer.getBounds().isValid()) map.fitBounds(distritosLayer.getBounds(),
+   { padding: [20,20] 
+
+  }
 
 );
 }
