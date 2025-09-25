@@ -1,6 +1,7 @@
 
 // Inicializa mapa
-const map = L.map('map', { zoomControl: true });
+const map = L.map('map', { zoomControl: true,  });
+map.attributionControl.setPrefix('CAMI YAKU');
 map.whenReady(updateLabelsForZoom);
 map.on('zoomend', updateLabelsForZoom);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
