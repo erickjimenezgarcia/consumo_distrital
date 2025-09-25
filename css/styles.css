@@ -4,12 +4,12 @@ body {
   height: 100%;
   background:
     linear-gradient(to right,
-      #0083C9 0%,
-      #0083C9 12%,
+      #62B3E4 0%,
+      #62B3E4 12%,
       #ffffff 12%,
       #ffffff 88%,
-      #0083C9 88%,
-      #0083C9 100%);
+      #62B3E4 88%,
+      #62B3E4 100%);
   font-family: system-ui, Arial;
 }
 
