@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Mapa — Distritos Lima & Callao (Leaflet)</title>
+  <title>Mapas de consumo de agua</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="./img/sunass_logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -12,23 +13,23 @@
 </head>
 
 <body>
-    <div class="top">
-        <h1>Mapas de consumo de agua por distrito</h1>
+  <div class="top">
+    <img class="top-logo left" src="./img/camiyaku.jpg" alt="Logo izquierdo" />
+    <h1 style="color: #0083C9; font-size: 24px;">Mapas de consumo de agua por distrito</h1>
+    <img class="top-logo right" src="./img/sunass_logo2.png" alt="Logo derecho" />
+  </div>
+
+  <div class="container">
+    <div class="topbar" style="background-color: #0083C9; color:#fff;">
+      <div>
+        <strong>Distritos Lima y Callao</strong>
+        <span class="hint">Pasa el mouse para resaltar. Clic para abrir el enlace del distrito.</span>
+      </div>
+      <input id="search" placeholder="Buscar distrito..." />
     </div>
+    <div id="map"></div>
+  </div>
 
-    <div class="container">
-        <div class="topbar">
-            <div>
-                <strong>Distritos Lima & Callao</strong>
-                <span class="hint">Pasa el mouse para resaltar. Clic para abrir el enlace del distrito.</span>
-            </div>
-            <input id="search" placeholder="Buscar distrito..." />
-        </div>
-        <div id="map"></div>
-    </div>
-
-
-    
 </body>
 </html>
 <script>
