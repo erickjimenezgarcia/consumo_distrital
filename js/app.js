@@ -22,8 +22,9 @@ const estiloBase = () => ({ weight: 1, color: '#333', fillOpacity: 0.12, fillCol
 function hoverOn(e){
   const l = e.target;
   l.setStyle({ weight: 2, color: '#000', fillOpacity: 0.55 });
-  l.bringToFront();
-  map.getContainer().style.cursor = 'pointer';
+
+  const url = CAMPO_LINK ? (l.feature?.properties?.[CAMPO_LINK] || '').toString().trim() : '';
+  map.getContainer().style.cursor = url ? 'pointer' : '';
 }
 function hoverOff(e){
   // vuelve al estilo base (misma fillColor estable)
@@ -131,11 +132,14 @@ function colorFor(key) {
 function estiloPorDistrito(feature) {
   const props = feature.properties || {};
   const nombre = (props[CAMPO_NOMBRE] || '').toString().trim();
+  const url = CAMPO_LINK ? (props[CAMPO_LINK] || '').toString().trim() : '';
+  const tieneLink = Boolean(url);
+
   return {
     weight: 1,
     color: '#333',
     fillOpacity: 0.4,
-    fillColor: colorFor(nombre) // <- estable
+    fillColor: tieneLink ? colorFor(nombre) : COLOR_SIN_LINK
   };
 }
 
